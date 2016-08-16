@@ -20,18 +20,3 @@ d3.select("#myGraph") //select a SVG component
 			.style("fill", "cyan");
 	}); //fill clicked bar with cyan
 
-//handle an event of clicking the button
-d3.select("#update")
-	.on("click", function() {
-		for(var i = 0; i < dataSet.length; i++) {
-			dataSet[i] = Math.floor(Math.random() * 320);//get a random number between 0 and 320
-		}
-		d3.select("#myGraph")
-			.selectAll("rect")
-			.data(dataSet)
-			.transition() //set transition animation
-			.attr("width", function(d) {
-				return d + "px";
-			})
-	});
-
