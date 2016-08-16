@@ -27,5 +27,5 @@ d3.select("#update")
 			.attr("width", function(d) {
 				return d + "px";
 			})
-	})
+	});
 
