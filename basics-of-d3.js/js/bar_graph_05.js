@@ -5,8 +5,8 @@ var updatedData = [20, 230, 150, 10, 20];
 //draw a set of bars
 d3.select("#myGraph") //select a SVG component
 	.selectAll("rect") //set the SVG as a component for rendering rectangle bars
-	.data(dataSet) // import data
-	.enter() // create a rect component based on the number of data
+	.data(dataSet) //import data
+	.enter() //create a rect component based on the number of data
 	.append("rect") //initialize a rectangle
 	.attr("x", 0) //set x coordinates
 	.attr("y", function(d, i) {
@@ -20,7 +20,7 @@ d3.select("#myGraph") //select a SVG component
 //handle an event of clicking the button
 d3.select("#update")
 	.on("click", function() {
-		dataSet = updatedData;
+		dataSet = updatedData; //load new data
 		d3.select("#myGraph")
 			.selectAll("rect")
 			.data(dataSet)
