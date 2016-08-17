@@ -3,7 +3,7 @@ d3.csv("data/mydata.csv", function(err, d) {
 	var dataSet = []; //initialize an array for storing data
 	for(var i = 0; i < d.length; i++) {
 		dataSet.push(d[i].item1); //append data at item1 column
-	}
+	} 
 
 	//draw a set of bars
 	d3.select("#myGraph") //select a SVG component
@@ -24,7 +24,7 @@ d3.csv("data/mydata.csv", function(err, d) {
 	var xScale = d3.scale.linear() //set linear scale
 		.domain([0, 300]) //set data range
 		.range([0, 300]); //set output range
-
+	
 	//display linear scale
 	d3.select("#myGraph")
 		.append("g") //group components
